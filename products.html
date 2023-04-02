@@ -6,10 +6,392 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <meta charset="utf-8">
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Yaldevi', sans-serif;
+  }
+  span{
+    color: #fc5c65;
+    font-weight:900;
+   
+  }
+   
+  footer{
+    background: #f1f1f1;
+    padding: 90px 0;
+  }
+   
+  .footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+   
+  .logo{
+    width: 180px;
+  }
+   
+  .social-media{
+    margin: 20px 0;
+  }
+   
+  .social-media a{
+    color: #001a21;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+  }
+   
+  .social-media a:hover{
+    color: #fc5c65;
+  }
+   
+  .right-col h1{
+    font-size: 26px;
+  }
+   
+  .border{
+    width: 100px;
+    height: 4px;
+    background: #fc5c65;
+  }
+   
+  .newsletter-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+   
+  .txtb{
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+  }
+   
+  .btn{
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: #fc5c65;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+  }
+   
+  .btn:hover{
+    opacity: .7;
+  }
+   
+  .page-content{
+    min-height: 100vh;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  @media screen and (max-width:960px) {
+    .footer-container{
+      max-width: 600px;
+    }
+    .right-col{
+      width: 100%;
+      margin-bottom: 60px;
+    }
+   
+    .left-col{
+      width: 100%;
+      text-align: center;
+    }
+  }
+   
+   
+  @media screen and (max-width:700px){
+    .btn{
+      margin: 0;
+      width: 100%;
+      margin-top: 20px;
+      }
+  }
+      </style>
+    <style>
+        body {
+            background: #fbfbfd;
+        }
+
+        .new_footer_area {
+            background: #fbfbfd;
+        }
+
+
+        .new_footer_top {
+            padding: 120px 0px 270px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .new_footer_area .footer_bottom {
+            padding-top: 5px;
+            padding-bottom: 50px;
+        }
+
+        .footer_bottom {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            color: #7f88a6;
+            padding: 27px 0px;
+        }
+
+        .new_footer_top .company_widget p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            color: #6a7695;
+            margin-bottom: 20px;
+        }
+
+        .new_footer_top .company_widget .f_subscribe_two .btn_get {
+            border-width: 1px;
+            margin-top: 20px;
+        }
+
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+
+        .btn_get:hover {
+            color: #fff;
+            background: #6754e2;
+            border-color: #6754e2;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        a:hover,
+        a:focus,
+        .btn:hover,
+        .btn:focus,
+        button:hover,
+        button:focus {
+            text-decoration: none;
+            outline: none;
+        }
+
+
+
+        .new_footer_top .f_widget.about-widget .f_list li a:hover {
+            color: #5e2ced;
+        }
+
+        .new_footer_top .f_widget.about-widget .f_list li {
+            margin-bottom: 11px;
+        }
+
+        .f_widget.about-widget .f_list li:last-child {
+            margin-bottom: 0px;
+        }
+
+        .f_widget.about-widget .f_list li {
+            margin-bottom: 15px;
+        }
+
+        .f_widget.about-widget .f_list {
+            margin-bottom: 0px;
+        }
+
+        .new_footer_top .f_social_icon a {
+            width: 44px;
+            height: 44px;
+            line-height: 43px;
+            background: transparent;
+            border: 1px solid #e2e2eb;
+            font-size: 24px;
+        }
+
+        .f_social_icon a {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 45px;
+            color: #858da8;
+            display: inline-block;
+            background: #ebeef5;
+            text-align: center;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+
+        .ti-facebook:before {
+            content: "\e741";
+        }
+
+        .ti-twitter-alt:before {
+            content: "\e74b";
+        }
+
+        .ti-vimeo-alt:before {
+            content: "\e74a";
+        }
+
+        .ti-pinterest:before {
+            content: "\e731";
+        }
+
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: #fff;
+        }
+
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+
+        .new_footer_top .f_social_icon a:hover {
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: white;
+        }
+
+        .new_footer_top .f_social_icon a+a {
+            margin-left: 4px;
+        }
+
+        .new_footer_top .f-title {
+            margin-bottom: 30px;
+            color: #263b5e;
+        }
+
+        .f_600 {
+            font-weight: 600;
+        }
+
+        .f_size_18 {
+            font-size: 18px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #4b505e;
+        }
+
+        .new_footer_top .f_widget.about-widget .f_list li a {
+            color: #6a7695;
+        }
+
+
+        .new_footer_top .footer_bg {
+            position: absolute;
+            bottom: 0;
+            background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+            width: 100%;
+            height: 266px;
+        }
+
+        .new_footer_top .footer_bg .footer_bg_one {
+            background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+            width: 330px;
+            height: 105px;
+            background-size: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            -webkit-animation: myfirst 22s linear infinite;
+            animation: myfirst 22s linear infinite;
+        }
+
+        .new_footer_top .footer_bg .footer_bg_two {
+            background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+            width: 88px;
+            height: 100px;
+            background-size: 100%;
+            bottom: 0;
+            left: 38%;
+            position: absolute;
+            -webkit-animation: myfirst 30s linear infinite;
+            animation: myfirst 30s linear infinite;
+        }
+
+
+
+        @-moz-keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @-webkit-keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /*************footer End*****************/
+    </style>
+
+    <head>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+            rel="stylesheet" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <style>
+
+        </style>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    </head>
     <title>HubSpot | Software, Tools, Resources for Your Business</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -300,6 +682,10 @@
             overflow: hidden;
             position: absolute !important;
             width: 1px
+        }
+
+        body {
+            background-color: white;
         }
     </style>
 
@@ -2723,213 +3109,11 @@
                 ga_nav_tree_text="Skip to content">
                 Skip to content
             </a>
-            <nav class="hsg-nav-bar hsg-nav-top-bar" aria-label="Utility Navigation" style="background-color: #040f1a;">
-                <div class="hsg-page-width-normal">
-                    <div class="hsg-nav__inner">
 
-                        <ul class="hsg-nav__group">
-
-                            <li class="hsg-nav__group-item hsg-nav__group-item--has-dropdown">
-                                <div class="hsg-nav__link-wrapper">
-                                    <button aria-expanded="false" aria-controls="Language-submenu"
-                                        class="hsg-nav__link">
-                                        <span class="hsg-nav__link-label hsg-nav__link-label--globe">
-                                            <svg class="hsg-nav__globe-icon" aria-hidden="true">
-                                                <use xlink:href="#hs-icon-globe" fill="currentColor" />
-                                            </svg>
-                                            English<span class="visually-hidden">: Select a language</span>
-
-                                        </span>
-                                    </button>
-                                </div>
-                                <ul id="Language-submenu" class="hsg-nav__dropdown-list">
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link hsg-nav__dropdown-country-link"
-                                            href="https://www.hubspot.jp/" lang="ja" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="日本語">日本語</a>
-                                    </li>
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link hsg-nav__dropdown-country-link"
-                                            href="https://www.hubspot.de/" lang="de" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="Deutsch">Deutsch</a>
-                                    </li>
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link hsg-nav__dropdown-country-link active " href="index.html"
-                                            aria-current="page" lang="en" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="English">English</a>
-                                    </li>
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link hsg-nav__dropdown-country-link"
-                                            href="https://www.hubspot.es/" lang="es" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="Español">Español</a>
-                                    </li>
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link hsg-nav__dropdown-country-link"
-                                            href="https://br.hubspot.com/" lang="pt" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="Português">Português</a>
-                                    </li>
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link hsg-nav__dropdown-country-link"
-                                            href="https://www.hubspot.fr/" lang="fr" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="Français">Français</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-
-                            <li class="hsg-nav__group-item hsg-nav__group-item--has-contrast-toggle">
-                                <button class="a11y-contrast-toggle -small -icon-left">
-                                    High Contrast
-                                </button>
-                            </li>
-
-
-
-
-
-                            <li class="hsg-nav__group-item">
-                                <div class="hsg-nav__link-wrapper">
-                                    <a href="http://offers.hubspot.com/contact-sales"
-                                        class="ga_nav_link hsg-nav__link  homepage-nav-contact-sales"
-                                        data-ga_nav_type="header_nav" data-ga_nav_tree_text="Contact Sales">
-                                        <span class="hsg-nav__link-label hsg-nav__link-label--contact-us">
-                                            <svg aria-hidden="true" width="14" height="16"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path fill="currentColor" transform="translate(-317 -81)"
-                                                    fill-rule="evenodd"
-                                                    d="M323.963 81c2.124 0 3.852 1.778 3.852 3.964 0 1.905-.56 3.606-1.435 4.719-.661.843-1.502 1.35-2.417 1.35-.908 0-1.742-.5-2.4-1.33-.884-1.114-1.452-2.823-1.452-4.739 0-2.186 1.728-3.964 3.852-3.964zm3.487 9.089a8.438 8.438 0 012.898 2.2c.432.508.422 1.26-.012 1.766-1.545 1.805-3.812 2.945-6.33 2.945-2.547 0-4.836-1.165-6.382-3.004-.41-.488-.376-1.22.037-1.705a8.437 8.437 0 012.836-2.174c.895 1.272 2.118 2.06 3.466 2.06 1.358 0 2.59-.799 3.487-2.088z" />
-                                            </svg>
-                                            Contact Sales</span>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </ul>
-
-                        <ul class="hsg-nav__group">
-                            <li class="hsg-nav__group-item hsg-nav__group-item--search">
-
-                                <!-- pageLang: en -->
-                                <input type="search" class="" data-id="hsg-nav__search-input" placeholder="search..."
-                                    data-config="{&quot;contexts&quot;:[{&quot;cx&quot;:&quot;009219321729865762236:z9gsnksfc30&quot;,&quot;id&quot;:&quot;website&quot;,&quot;label&quot;:&quot;Search HubSpot.com&quot;,&quot;selected&quot;:true},{&quot;cx&quot;:&quot;009219321729865762236:fzizmixjdmi&quot;,&quot;id&quot;:&quot;blog&quot;,&quot;label&quot;:&quot;Search the blog&quot;,&quot;selected&quot;:null}],&quot;loadMoreButton&quot;:&quot;Load More Results&quot;,&quot;noResults&quot;:[&quot;That's odd...&quot;,&quot;couldn't find quite the right match.&quot;,&quot;Don't worry, try searching again up top.&quot;]}"
-                                    aria-label="Search">
-
-
-                            </li>
-                            <li class="hsg-nav__group-item hsg-nav__group-item--login">
-
-
-
-
-                                <a class="ga_nav_link homepage-nav-login" data-logged-in-text="Go to my account"
-                                    data-logged-in-href="//app.hubspot.com/home" href="http://app.hubspot.com/login"
-                                    data-ga_nav_type="header_nav" data-ga_nav_tree_text="Log in">Log in</a>
-
-                            </li>
-
-
-
-                            <li class="hsg-nav__group-item">
-
-                                <a class="hsg-nav__group-item--utility ga_nav_link"
-                                    href="https://help.hubspot.com/?_ga=2.23678194.978470726.1592315215-1192486389.1556035228"
-                                    data-ga_nav_type="header_nav" data-ga_nav_tree_text="Customer Support">Customer
-                                    Support</a>
-
-                            </li>
-
-
-                            <li
-                                class="hsg-nav__group-item hsg-nav__group-item--about hsg-nav__group-item--has-dropdown">
-                                <div class="hsg-nav__link-wrapper">
-                                    <button aria-expanded="false" aria-controls="hsg-nav-about-submenu"
-                                        class="hsg-nav__link">
-                                        <span class="hsg-nav__link-label">
-                                            About
-
-                                        </span>
-                                    </button>
-                                </div>
-                                <ul id="hsg-nav-about-submenu" class="hsg-nav__dropdown-list">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link homepage-nav-about-desktop" href="our-story.html"
-                                            data-ga_nav_type="header_nav" data-ga_nav_tree_text="About > About Us">About
-                                            Us</a>
-                                    </li>
-
-
-
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a href="careers.html" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="About > Careers">Careers</a>
-                                    </li>
-
-
-
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a class="ga_nav_link homepage-nav-contact-us" href="company/contact.html"
-                                            data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="About > Contact Us">Contact Us</a>
-                                    </li>
-
-
-
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a href="http://ir.hubspot.com/" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="About > Investor Relations">Investor Relations</a>
-                                    </li>
-
-
-
-                                    <li class="hsg-nav__dropdown-item">
-                                        <a href="company/management.html" data-ga_nav_type="header_nav"
-                                            data-ga_nav_tree_text="About > Management Team">Management Team</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
             <div class="fixed-top">
                 <div data-fixed-element="placeholder">
                     <nav class="hsg-nav-menu" data-fixed-element="target" aria-label="Primary Navigation"
-                        style="background-color: #a0b6b6;">
+                        style="background-color:#FFFFFF;">
                         <div class="hsg-page-width-normal">
                             <div class="hsg-nav__inner">
                                 <a href="index.html" id="hsg-nav__logo" aria-label="HubSpot"
@@ -4023,7 +4207,7 @@
 
 
                                             <a class="cta cta--regular cta--primary ga_nav_link  homepage-nav"
-                                                href="products/get-started5175.html?hubs_content=www.hubspot.com/&amp;hubs_content-cta=homepage-nav"
+                                                href="./signup.html"
                                                 data-ga_nav_type="header_nav"
                                                 data-ga_nav_tree_text="Start free or get a demo ">Start free or get a
                                                 demo
@@ -4161,211 +4345,205 @@
                 </div>
                 <div id="hsg-main-content" tabindex="-1"></div>
             </div>
-        </header>
+            <div style="margin-left: -30px;">
+            <h1 style="font-weight: 400;font-size: 25px;line-height: 24px;margin-top: 120px;margin-left: 620px;color: #07294b;">Products</h1>
+            <p style="font-weight: 300;font-size: 15px;line-height: 24px;margin-top: 10px;margin-left: 500px;color: #093561;">Comprehensive software solutions for every use case.</p>
+        </div>
+            <div id="mcont"
+                style="display: grid;grid-template-columns: repeat(3,1fr);gap:40px;margin-top: 20px;margin-left:80px;">
+                <div class="card" style="width: 18rem;width: 350px;height: 200px;">
+                    <div class="card-body">
+                        <div style="display: flex;">
+                            <img
+                                src="https://static.hsappstatic.net/ui-addon-upgrades/static-9.8380/js/img/MarketingHub_Icon.svg">
+                            <h5 class="card-title"
+                                style="margin-left: 10px;font-weight:300;font-size: 20px;line-height :24px;"> Marketing
+                                Hub</h5>
+                        </div>
+                        <p class="card-text" style="font-weight:400;font-size: 14px;line-height :24px;">Create content,
+                            capture leads, and run complete inbound marketing campaigns.</p>
+                        <a href="./details.html" class="card-link"
+                            style="color: #056170;font-weight:600;font-size: 14px;line-height :24px;">Explore <img
+                                style="width: 25px;height: 20px;"
+                                src="https://t4.ftcdn.net/jpg/05/32/45/09/240_F_532450910_tWP19GN7WU1mp0hxVwcFBKekkFN4xBJ8.jpg"></a>
+
+
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;width: 350px;height: 200px;">
+                    <div class="card-body">
+                        <div style="display: flex;">
+                            <img
+                                src="https://static.hsappstatic.net/ui-addon-upgrades/static-9.8380/js/img/SalesHub_Icon.svg">
+                            <h5 class="card-title"
+                                style="margin-left: 10px;font-weight:300;font-size: 20px;line-height :24px;"> Marketing
+                                Hub</h5>
+                        </div>
+                        <p class="card-text" style="font-weight:400;font-size: 14px;line-height :24px;">Create content,
+                            capture leads, and run complete inbound marketing campaigns.</p>
+                        <a href="./details.html" class="card-link"
+                            style="color: #056170;font-weight:600;font-size: 14px;line-height :24px;">Explore <img
+                                style="width: 25px;height: 20px;"
+                                src="https://t4.ftcdn.net/jpg/05/32/45/09/240_F_532450910_tWP19GN7WU1mp0hxVwcFBKekkFN4xBJ8.jpg"></a>
+
+
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;width: 350px;height: 200px;">
+                    <div class="card-body">
+                        <div style="display: flex;">
+                            <img
+                                src="https://static.hsappstatic.net/ui-addon-upgrades/static-9.8380/js/img/ServiceHub_Icon.svg">
+                            <h5 class="card-title"
+                                style="margin-left: 10px;font-weight:300;font-size: 20px;line-height :24px;"> Marketing
+                                Hub</h5>
+                        </div>
+                        <p class="card-text" style="font-weight:400;font-size: 14px;line-height :24px;">Create content,
+                            capture leads, and run complete inbound marketing campaigns.</p>
+                        <a href="./details.html" class="card-link"
+                            style="color: #056170;font-weight:600;font-size: 14px;line-height :24px;">Explore <img
+                                style="width: 25px;height: 20px;"
+                                src="https://t4.ftcdn.net/jpg/05/32/45/09/240_F_532450910_tWP19GN7WU1mp0hxVwcFBKekkFN4xBJ8.jpg"></a>
+
+
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;width: 350px;height: 200px;">
+                    <div class="card-body">
+                        <div style="display: flex;">
+                            <img
+                                src="https://static.hsappstatic.net/ui-addon-upgrades/static-9.8380/js/img/CMSHub_Icon.svg">
+                            <h5 class="card-title"
+                                style="margin-left: 10px;font-weight:300;font-size: 20px;line-height :24px;"> Marketing
+                                Hub</h5>
+                        </div>
+                        <p class="card-text" style="font-weight:400;font-size: 14px;line-height :24px;">Create content,
+                            capture leads, and run complete inbound marketing campaigns.</p>
+                        <a href="./details.html" class="card-link"
+                            style="color: #056170;font-weight:600;font-size: 14px;line-height :24px;">Explore <img
+                                style="width: 25px;height: 20px;"
+                                src="https://t4.ftcdn.net/jpg/05/32/45/09/240_F_532450910_tWP19GN7WU1mp0hxVwcFBKekkFN4xBJ8.jpg"></a>
+
+
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;width: 350px;height: 200px;">
+                    <div class="card-body">
+                        <div style="display: flex;">
+                            <img
+                                src="https://static.hsappstatic.net/ui-addon-upgrades/static-9.8380/js/img/OperationsHub_Icon.svg">
+                            <h5 class="card-title"
+                                style="margin-left: 10px;font-weight:300;font-size: 20px;line-height :24px;"> Marketing
+                                Hub</h5>
+                        </div>
+                        <p class="card-text" style="font-weight:400;font-size: 14px;line-height :24px;">Create content,
+                            capture leads, and run complete inbound marketing campaigns.</p>
+                        <a href="./details.html" class="card-link"
+                            style="color: #056170;font-weight:600;font-size: 14px;line-height :24px;">Explore <img
+                                style="width: 25px;height: 20px;"
+                                src="https://t4.ftcdn.net/jpg/05/32/45/09/240_F_532450910_tWP19GN7WU1mp0hxVwcFBKekkFN4xBJ8.jpg"></a>
 
 
 
 
-
-
-
+                    </div>
+                </div>
+            </div>
     </div>
-
-
-
-    <div class="container" style="margin-top: 50px;width: 400px;">
-        <form method="post" autocomplete="on" style="margin-top: -60px;margin-left: -40px;">
-            <!--First name-->
-            <div class="box">
-                <label for="firstName" class="fl fontLabel"> First Name: </label>
-                <div class="new iconBox">
-                    <img style="width: 80%;height: 80%;margin-top: 3px;"
-                        src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png">
+    <footer style="margin-top: 40px;background-color: white;">
+        <div class="footer-container">
+          <div class="left-col">
+            <img src="bhelo-logo.png" alt="" class="logo" style="border-radius: 200px;">
+            <div class="social-media">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="rights-text">© 2023  <b>Bhelo.com</b>  All Rights Reserved.</p>
+          </div>
+   
+          <div class="right-col">
+            <h1>Our Support</h1>
+            <div class="border"></div>
+            <p>Enter Your Email to get our news and updates.</p>
+            <form action="" class="newsletter-form">
+              <input type="text" class="txtb" placeholder="Enter Your Email">
+              <input type="submit" class="btn" value="submit">
+            </form>
+          </div>
+        </div>
+      </footer>
+    <div id="footercon" style="margin-top: -300px;" >
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                            <p>Don’t miss any updates of our new templates and extensions.!</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true"
+                                _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Android App</a></li>
+                                <li><a href="#">ios App</a></li>
+                                <li><a href="#">Desktop</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">My tasks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Term &amp; conditions</a></li>
+                                <li><a href="#">Reporting</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Support Policy</a></li>
+                                <li><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                            style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"></a>
+                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-pinterest"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="fr">
-                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on" required
-                        id="firstname">
-                </div>
-                <div class="clr"></div>
+            </div> -->
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
             </div>
-            <!--First name-->
+        </div>
+       
+    </footer>
 
-
-            <!--Second name-->
-            <div class="box">
-                <label for="secondName" class="fl fontLabel"> Seconed Name: </label>
-                <div class="fl iconBox"><img style="width: 80%;height: 80%;margin-top: 3px;"
-                        src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png"></div>
-                <div class="fr">
-                    <input type="text" required name="secondName" placeholder="Last Name" class="textBox"
-                        id="secondaname">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--Second name-->
-
-
-            <!---Phone No.------>
-            <div class="box">
-                <label for="phone" class="fl fontLabel"> Phone No.: </label>
-                <div class="fl iconBox"><img style="width: 80%;height: 80%;margin-top: 3px;"
-                        src="https://cdn-icons-png.flaticon.com/128/25/25377.png"></div>
-                <div class="fr">
-                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox"
-                        id="phoneno">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!---Phone No.---->
-
-
-            <!---Email ID---->
-            <div class="box">
-                <label for="email" class="fl fontLabel"> Email ID: </label>
-                <div class="fl iconBox"><img style="width: 80%;height: 80%;margin-top: 3px;"
-                        src="https://cdn-icons-png.flaticon.com/128/725/725643.png"></div>
-                <div class="fr">
-                    <input type="email" required name="email" placeholder="Email Id" class="textBox" id="email">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--Email ID----->
-
-
-            <!---Password------>
-            <div class="box">
-                <label for="password" class="fl fontLabel"> Password </label>
-                <div class="fl iconBox"><img style="width: 80%;height: 80%;margin-top: 3px;"
-                        src="https://cdn-icons-png.flaticon.com/128/9068/9068759.png"></div>
-                <div class="fr">
-                    <input type="Password" required name="password" placeholder="Password" class="textBox" required name="password" 
-                        id="password">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!---Password---->
-
-            <!---Gender----->
-            <div class="box radio">
-                <label for="gender" class="fl fontLabel"> Gender: </label>
-                <input type="radio" name="Gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
-                <input type="radio" name="Gender" value="Female" required> Female
-            </div>
-            <!---Gender--->
-
-
-            <!--Terms and Conditions------>
-            <div class="box terms">
-                <input type="checkbox" name="Terms" required> &nbsp; I accept the terms and conditions
-            </div>
-            <!--Terms and Conditions------>
-
-
-
-            <!---Submit Button------>
-            <div class="box" style="background: #2d3e3f">
-                <input type="Submit" name="Submit" class="submit" value="SUBMIT" style="margin-right: 110px;" id="submit">
-            </div>
-            <!---Submit Button----->
-            <p style="margin-top: -10px;margin-right: -100px;"><a style="color: white;margin-top: -30px;margin-right: -20px;" href="./login.html">or login?</a> </p>
-        </form>
-    </div>
-
-    <div id="footerdiv" style="margin-top: 400px;">
-        <footer class="footer">
-            <div class="waves">
-                <div class="wave" id="wave1"></div>
-                <div class="wave" id="wave2"></div>
-                <div class="wave" id="wave3"></div>
-                <div class="wave" id="wave4"></div>
-            </div>
-            <ul class="social-icon">
-                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a></li>
-                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a></li>
-                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a></li>
-                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a></li>
-            </ul>
-            <ul class="menu">
-                <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-
-            </ul>
-            <p>&copy;2023 Bhelo.com | All Rights Reserved</p>
-        </footer>
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+</div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-    crossorigin="anonymous"></script>
-<script>
-    let firstname = document.getElementById("firstname")
-    let secondaname = document.getElementById("secondaname")
-    let phoneNo = document.getElementById("phoneno")
-    let email = document.getElementById("email")
-    let password = document.getElementById("password")
-    let submit=document.getElementById("submit")
-    var url =
-        "https://ruby-tasty-cougar.cyclic.app/add";
-    submit.addEventListener("click", register)
-    function register(event) {
-       // if(firstname.value && email.value && password.value){
-        event.preventDefault()
-        var data = {
-            name: firstname.value,
-           
-            email: email.value,
-
-            password: password.value
-        };
-        console.log(data);
-        try {
-           // alert(`regestration successsfull ${data.name} please login`);
-           async function postData(url, data) {
-       try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-    const parsedResponse = await response.json();
-    console.log(parsedResponse);
-    if(parsedResponse.error){
-        alert(`${parsedResponse.error} Please login`)
-        await redirectTo()
-    }else{
-        alert(`Welcome ${data.name}`)
-        await redirectTo()
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-postData(url,data);
-        } catch (error) {
-          
-            alert(error)
-        }
-    }
-    
-    function redirectTo() {
-       location = "login.html";
-    }
-
-</script>
+</header>
